@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {AnimatePresence, motion} from 'framer-motion'
 import PhotoGallery from './PhotoGallery/PhotoGallery'
-import Authenticate from './Authenticate'
+import Authenticate from './Authentication/Authenticate'
 
 export default function Main() {
   const [galleryPhotos, setGalleryPhotos] = useState([])

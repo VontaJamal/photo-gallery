@@ -1,0 +1,18 @@
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 0.2rem;
+}
+
+.titleText {
+  width: 75%;
+  color: var(--djws);
+}
+
+.titleButtonContainer {
+  text-align: center;
+  margin-bottom: 5px;
+  width: 50%;
+}

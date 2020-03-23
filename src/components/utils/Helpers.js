@@ -6,8 +6,12 @@ const getMediaItems = async token => {
   })
 
   const {mediaItems, nextPageToken} = response.result
+  const filteredMediaItems = mediaItems.filter(mediaItem =>
+    mediaItem.mimeType.includes('image')
+  )
+
   return {
-    mediaItems,
+    mediaItems: filteredMediaItems,
     nextPageToken
   }
 }

@@ -21,7 +21,9 @@ export default function Photo({
       transition={{ease: 'easeOut'}}
       whileTap={{scale: 0.95}}
       whileHover={{scale: 1.01}}
-      className={`photo ${isActivePhoto ? 'activePhoto' : 'selectPhoto'}`}
+      className={`photoContainer ${
+        isActivePhoto ? 'activePhoto' : 'selectPhoto'
+      }`}
     >
       <button
         onClick={() => {
@@ -31,7 +33,7 @@ export default function Photo({
         type="button"
         className="buttonPhoto"
       >
-        <img src={src} alt="" />
+        <img className="photo" src={src} alt="" />
       </button>
     </motion.div>
   )

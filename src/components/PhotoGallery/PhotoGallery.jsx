@@ -11,9 +11,7 @@ export default function PhotoGallery({
   setNextPhotoSet,
   nextPhotoSet
 }) {
-  const [photo, setPhoto] = useState(
-    'https://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png'
-  )
+  const [photo, setPhoto] = useState(null)
   const [displayPhotos, setDisplayPhotos] = useState([])
   const [leftPanelPhotos, setLeftPanelPhotos] = useState([])
   const [rightPanelPhotos, setRightPanelPhotos] = useState([])
@@ -78,7 +76,8 @@ export default function PhotoGallery({
             className="feature"
             positionTransition
           >
-            <img src={photo} alt="Selected Memory" />
+            {!photo && <p className="featureText">Select A Photo To View!</p>}
+            {photo && <img src={photo} alt="Selected Google Play Feature" />}
           </motion.div>
         </div>
         <PhotoList
@@ -96,7 +95,7 @@ export default function PhotoGallery({
         paginate={paginate}
         currentPage={currentPage}
       />
-      <div className="buttonContainer">
+      <div className="galleryButtonContainer">
         <motion.button
           className="btn-gradient blue mini"
           type="button"

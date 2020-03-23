@@ -26,13 +26,9 @@ export default function Pagination({
               key={number}
               className={number === currentPage ? 'active' : undefined}
             >
-              <a
-                onClick={() => paginate(number)}
-                href="!#"
-                className="page-link"
-              >
+              <button type="button" onClick={() => paginate(number)}>
                 {number}
-              </a>
+              </button>
             </li>
           )
         })}

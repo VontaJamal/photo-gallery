@@ -1,5 +1,5 @@
 .pagination {
-  color: red;
+  color: var(--djws);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,7 @@
 ul {
   list-style: none;
   display: flex;
-  border: 1px solid red;
+  border: 1px solid var(--djws);
   font-size: 1.3em;
 }
 
@@ -18,14 +18,17 @@ li {
   padding: 0.25rem;
 }
 
-nav a {
-  text-decoration: none;
-  display: inline-block;
+nav button {
+  display: block;
   padding: 0.3rem;
   color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
 .active {
   color: #282c34;
-  background-color: red;
+  background-color: var(--djws);
 }

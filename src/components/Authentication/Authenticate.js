@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import {motion} from 'framer-motion'
-import getMediaItems from './utils/Helpers'
+import getMediaItems from '../utils/Helpers'
+import './Authenticate.css'
 
 export default function Authenticate({
   setGalleryPhotos,
@@ -67,24 +68,27 @@ export default function Authenticate({
   }
 
   return (
-    <div
-      className="buttonContainer"
-      style={{textAlign: isAuthenticated ? 'right' : 'center'}}
-    >
-      <motion.button
-        className={`btn-gradient ${
-          isAuthenticated ? 'red mini' : 'green large'
-        }`}
-        type="button"
-        onClick={() => handleAuthClick(!isAuthenticated)}
-        whileHover={{
-          scale: 1.1,
-          transition: {duration: 1}
-        }}
-        whileTap={{scale: 0.9}}
+    <div className="titleContainer">
+      {isAuthenticated && <p className="titleText">DJWS Google Photo Viewer</p>}
+      <div
+        className="titleButtonContainer"
+        style={{textAlign: isAuthenticated ? 'right' : 'center'}}
       >
-        {isAuthenticated ? 'Sign Out' : 'Sign in to start!'}
-      </motion.button>
+        <motion.button
+          className={`btn-gradient ${
+            isAuthenticated ? 'red mini' : 'green large'
+          }`}
+          type="button"
+          onClick={() => handleAuthClick(!isAuthenticated)}
+          whileHover={{
+            scale: 1.1,
+            transition: {duration: 1}
+          }}
+          whileTap={{scale: 0.9}}
+        >
+          {isAuthenticated ? 'Sign Out' : 'Sign in to start!'}
+        </motion.button>
+      </div>
     </div>
   )
 }

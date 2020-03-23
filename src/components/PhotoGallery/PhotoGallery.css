@@ -3,25 +3,22 @@
   flex-flow: column wrap;
 }
 
-@media only screen and (max-width: 800px) {
+.featureText {
+  font-size: 4rem;
+  padding: 0.2em;
+}
+
+@media only screen and (max-width: 990px) {
   .container {
     grid-template-columns: 1fr;
-  }
-
-  .feature {
-    max-height: 325px;
-    min-height: 325px;
+    grid-template-rows: 1fr 3fr 1fr;
+    /* row-gap: 0.5rem; */
   }
 }
 
 @media only screen and (min-width: 992px) {
   .container {
-    grid-template-columns: 1fr auto 1fr;
-  }
-
-  .feature {
-    max-width: 1250px;
-    min-width: 1250px;
+    grid-template-columns: 1fr 4fr 1fr;
   }
 }
 
@@ -46,6 +43,18 @@
 .feature img {
   max-width: 100%;
   height: 100%;
+}
+
+.galleryButtonContainer {
+  text-align: center;
+  margin-bottom: 5px;
+  width: 100vw;
+}
+
+.mini {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-family: inherit;
 }
 
 .btn-gradient.blue {
@@ -82,10 +91,4 @@
     rgba(92, 138, 184, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6698cb', endColorstr='#5c8ab8', GradientType=0 );
-}
-
-.mini {
-  padding: 4px 12px;
-  font-size: 12px;
-  font-family: inherit;
 }
