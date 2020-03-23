@@ -7,12 +7,12 @@
 }
 
 .titleText {
-  width: 75%;
+  flex: 2;
   color: var(--djws);
 }
 
 .titleButtonContainer {
+  flex: 1;
   text-align: center;
   margin-bottom: 5px;
-  width: 50%;
 }
