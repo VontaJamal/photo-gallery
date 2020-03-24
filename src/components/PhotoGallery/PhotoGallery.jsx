@@ -105,7 +105,7 @@ export default function PhotoGallery({
           }}
           whileTap={{scale: 0.9}}
         >
-          Next Photos
+          Get New Photos
         </motion.button>
       </div>
     </div>
