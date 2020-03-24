@@ -25,8 +25,9 @@
 
 .container {
   display: grid;
-  width: 100vw;
+  width: 95vw;
   height: 80vh;
+  margin: 0 auto;
 }
 
 .featureContainer {
