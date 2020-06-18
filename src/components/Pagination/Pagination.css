@@ -10,7 +10,7 @@ ul {
   list-style: none;
   display: flex;
   border: 1px solid var(--djws);
-  font-size: 1.3em;
+  font-size: 3em;
 }
 
 li {
