@@ -22,14 +22,14 @@ export default function Pagination({
       <ul className="paginationList">
         {pageNumbers.map(number => {
           return (
-            <li
-              key={number}
-              className={number === currentPage ? 'active' : undefined}
-            >
-              <button type="button" onClick={() => paginate(number)}>
+            <button type="button" onClick={() => paginate(number)}>
+              <li
+                key={number}
+                className={number === currentPage ? 'active' : undefined}
+              >
                 {number}
-              </button>
-            </li>
+              </li>
+            </button>
           )
         })}
       </ul>
